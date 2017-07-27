@@ -75,6 +75,10 @@ li a {
     font-family: 'Montserrat', sans-serif;
 }
 
+#myCarousel{
+  margin: 150px 350px 100px 350px;
+}
+
 li a:hover {
     background-color: #333;
     text-decoration: none;
@@ -242,7 +246,11 @@ h2{
 	margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
-
+.footer-left:nth-child(0),
+.footer-left:nth-child(1),
+.footer-left h4{
+  color: white;
+}
 /* Footer Center */
 
 .footer-distributed .footer-center{
