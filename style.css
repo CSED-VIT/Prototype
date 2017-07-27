@@ -4,8 +4,12 @@
          Images
          About SHEILD
          Footer
+         Put container in carousel
+         Change font for skills cards
  */
-
+/* BUG: Navbar
+        Hackathon text
+ */
 .flex-container {
     display: -webkit-flex;
     display: flex;
