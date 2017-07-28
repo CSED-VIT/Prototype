@@ -28,6 +28,9 @@
     font-family: 'Montserrat', sans-serif;
     line-height: 80px;
 }
+.temp p{
+    font-size: 60px;
+}
 .mob-temp {
     padding-top: 225px;
     padding-bottom: 225px;
@@ -38,14 +41,14 @@
     background-image: url("http://i.imgur.com/9ZOhetC.jpg");
 }
 
-.item {
+.item1 {
     background-color: white;
     border-radius: 5px;
     width: 425px;
-    height: 475px;
+    height: 520px;
     margin-top: 45px;
-
 }
+
 .box{
     padding-top: 50px;
     padding-left: 40px;
@@ -88,7 +91,9 @@ li a {
 }
 
 #myCarousel{
-  margin: 150px 350px 100px 350px;
+  margin: 120px auto;
+    width: 60%;
+    height: 60%;
 }
 
 li a:hover {
@@ -170,8 +175,7 @@ h1{
 }
 .end{
     background-color: #fafbfc;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 0 30px; 
 }
 h2{
     font-size: 50px;
