@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1030px) {
+    .flex-container{
+        display: none;
+    }
+    .full{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1030px) {
+    .mobile{
+        display: none;
+    }
+}
+@media (max-width: 880px) {
+    .footer-distributed{
+        font: bold 14px sans-serif;
+}

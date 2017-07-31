@@ -29,16 +29,19 @@
     line-height: 80px;
 }
 .temp p{
-    font-size: 60px;
+    height: 60px;
+    font-size: 50px;
 }
 .mob-temp {
-    padding-top: 225px;
-    padding-bottom: 225px;
     color: white;
-    font-size: 70px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     line-height: 80px;
+    height: 100vh;
+    width: 100vw;
     background-image: url("http://i.imgur.com/9ZOhetC.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .item1 {
@@ -94,6 +97,10 @@ li a {
   margin: 120px auto;
     width: 60%;
     height: 60%;
+}
+
+#myCarousel ol{
+    padding-left: 200px;
 }
 
 li a:hover {
@@ -385,6 +392,37 @@ h2{
     }
     .full{
         display: none;
+    }
+    .item1 {
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    height: 80%;
+    font-size: 15px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    }
+    .item1 input,.item1 select{
+        margin-top:-30px;
+    }
+    .item1 label{
+        margin-top: -20px;
+    }
+    .box{
+    color: #252b30;
+    font-family: 'Montserrat', sans-serif;
+    }
+    .mob-bck{
+        width: 100%;
+        height: 100vh;
+    }
+    form{
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+    }
+    .mobile-fix{
+        display: none !important;
     }
 }
 @media only screen and (min-width: 1030px) {

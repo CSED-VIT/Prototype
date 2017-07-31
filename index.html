@@ -10,6 +10,7 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <link href="media-queries.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
@@ -18,10 +19,39 @@
 <body>
     <div class="mobile">
         <div class="mob-bck">
-            <div class="mob-temp text-center">Built for you.
-            <p>Triggr is a platform inspired by the way you work.</p>
-            <button type="button" class="btn btn-default"><h5><b>   Sign up for Triggr   </b></h5></button>
-          </div>
+            <div class="mob-temp text-center">
+                <div class="col-lg-5 col-sm-12 col-md-12">
+               <form action="#" method="post">
+                <div class="item1 box">
+                    <div class="form-group">
+                      <label for="usr">Name:</label>
+                      <input type="text" class="form-control" id="usr" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Email:</label>
+                      <input type="email" class="form-control" id="pwd" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Registration Number:</label>
+                      <input type="text" class="form-control" id="pwd" placeholder="Enter Reg No.">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Phone Number:</label>
+                      <input type="text" class="form-control" id="pwd" placeholder="Enter Phone No.">
+                    </div>
+                    <div class="form-group">
+                      <label for="sel1">Select Event:</label>
+                      <select class="form-control" id="sel1">
+                        <option>Startup Street</option>
+                        <option>Kick-Startup</option>
+                        <option>Both</option>
+                      </select>
+                    </div>
+                    <button type="button" class="btn btn-default btn-lg btn-block">Register Now</button>
+                </div>
+                </form>
+            </div>
+            </div>
         </div>
     </div>
     <div class="full">
@@ -84,9 +114,11 @@
     </div>
     <div class="container">
         <div class="text-center one col-lg-12 col-md-12">
+            <div class="mobile-fix">
             <h4><b>SHEILD for you</b></h4>
             <h1 style="margin-bottom:20px;">A better way to explore</h1>
             <button type="button" class="btn btn-default"><h5><b>Get started now</b></h5></button>
+        </div>
         </div>
         <div class="row">
         <div class="col-lg-6 col-md-6 two">
@@ -158,7 +190,7 @@ in something that they love.</p></li>
                     <div class="thumbnail">
                       <img style="width:160px;height:160px;" src="http://i.imgur.com/l6XdDOD.png">
                       <div class="caption text-center">
-                          <h3><b>Coding</b></h3>
+                          <h3><b>Sales</b></h3>
                       </div>
                     </div>
                   </div>
@@ -241,7 +273,6 @@ in something that they love.</p></li>
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
     <div class="item active">
