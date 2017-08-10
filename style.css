@@ -10,6 +10,12 @@
 /* BUG: Navbar
         Hackathon text
  */
+ *{
+   box-sizing: border-box;
+ }
+ .body{
+   overflow-x: hidden;
+ }
 .flex-container {
     display: -webkit-flex;
     display: flex;
@@ -37,8 +43,9 @@
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     line-height: 80px;
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
+    padding-top: 30px;
     background-image: url("http://i.imgur.com/9ZOhetC.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -93,15 +100,10 @@ li a {
     font-family: 'Montserrat', sans-serif;
 }
 
-#myCarousel{
-  margin: 120px auto;
-    width: 60%;
-    height: 60%;
+.carousel{
+  margin: 40px auto;
 }
 
-#myCarousel ol{
-    padding-left: 200px;
-}
 
 li a:hover {
     background-color: #333;
@@ -182,7 +184,7 @@ h1{
 }
 .end{
     background-color: #fafbfc;
-    padding: 0 30px; 
+    padding: 0 30px;
 }
 h2{
     font-size: 50px;
@@ -389,6 +391,7 @@ h2{
 @media only screen and (max-width: 1030px) {
     .flex-container{
         display: none;
+        background-image:none;
     }
     .full{
         display: none;
@@ -399,8 +402,7 @@ h2{
     width: 80%;
     height: 80%;
     font-size: 15px;
-    margin: 0 auto;
-    margin-bottom: 200px;
+    margin: 30px auto;
     }
     .item1 input,.item1 select{
         margin-top:-30px;
@@ -412,15 +414,7 @@ h2{
     color: #252b30;
     font-family: 'Montserrat', sans-serif;
     }
-    .mob-bck{
-        width: 100%;
-        height: 100vh;
-    }
-    form{
-        margin: 0 auto;
-        height: 100%;
-        width: 100%;
-    }
+
     .mobile-fix{
         display: none !important;
     }
