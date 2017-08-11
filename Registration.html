@@ -5,7 +5,7 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
    <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
 
-  
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -19,10 +19,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-    <style>
-        
-        .mySlides {display:none;}
-    </style>
 </head>
 <body>
     <div class="mobile">
@@ -279,8 +275,8 @@ in something that they love.</p></li>
     </div>
     <div class="carousel" >
       <div class="anz-image mySlides"><img class="imgattr" src="images/IMG1.jpg" alt=""></div>
-      <div class="anz-image mySlides"><img src="images/IMG2.jpg" alt=""></div>
-      <div class="anz-image mySlides"><img src="images/IMG3.jpg" alt=""></div>
+      <div style="display:none;" class="anz-image mySlides"><img src="images/IMG2.jpg" alt=""></div>
+      <div style="display:none;" class="anz-image mySlides"><img src="images/IMG3.jpg" alt=""></div>
     </div>
     <div class="container-fluid end">
         <div class="container">
@@ -330,9 +326,9 @@ in something that they love.</p></li>
 </div>
 		</footer>
 <script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
-  
+
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-  <script src="lib/sweet-alert.min.js"></script>      
+  <script src="lib/sweet-alert.min.js"></script>
 
 <script>
   // Initialize Firebase
@@ -354,37 +350,33 @@ in something that they love.</p></li>
   <script src="./slick.min.js" charset="utf-8"></script>
   <script>
     $(function(){
-       
       var h=document.querySelector('.imgattr').naturalHeight;
       var w=document.querySelector('.imgattr').naturalWidth;
       $(".carousel").css({
         width: w,
         height:h,
       });
+      var gal=$(".carousel").find("img").first();
+      console.log(gal);
+      var images=$(".carousel").find("img").map(function () {
+        return $(this).attr("src");
+      }).get();
+      var i=0;
+      setInterval(function () {
+        i=(i+1)%images.length;
+        gal.fadeOut(500,function () {
+          $(this).attr("src",images[i]);
+          $(this).fadeIn(500);
+        });
+      }, 2000);
  });
   </script>
-    <script>
-        var myIndex = 0;
-    var my = 0;
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-     carousel();
-    </script>
 <script>
     var dbRef = new Firebase("https://sheild-55d2c.firebaseio.com/");
 
 var contactsRef = dbRef.child('Registration');
 
-$('.addValued').on("click", function( event ) {  
+$('.addValued').on("click", function( event ) {
     event.preventDefault();
     if(  $('#usr2').val() != '' && $('#eml2').val() != '' && $('#reg2').val() != '' && $('#pho2').val() != '' && $('#sel2').val() != ''){
       contactsRef.push({
@@ -393,16 +385,16 @@ $('.addValued').on("click", function( event ) {
           reg: $('#reg2').val(),
           phone: $('#pho2').val(),
           event: $('#sel2').val(),
-          
- 
+
+
           }
         )
         swal("Thanks For Registering", "We will get  in touch soon "+ $('#usr2').val()+".\n\n SHEILD-VIT ", "success");
-     
+
         contactForm2.reset();
     } else {
         sweetAlert("Oops...", "Please fill all required field", "error");
-    
+
     }
   });
     </script>
